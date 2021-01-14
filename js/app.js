@@ -40,11 +40,13 @@ var myFullpage = new fullpage('#fullpage', {
  *  Set padding height for text in speakers
  */
 
-var speakerBios = document.getElementsByClassName('bio');
-for (let index = 0; index < speakerBios.length; index++) {
-    const elem = speakerBios[index];
-    elem.previousElementSibling.children[0].onload = function () {
-        let profileHeight = elem.previousElementSibling.clientHeight;
-        elem.setAttribute('style', 'padding-bottom: '+profileHeight+'px');
+window.onload = function () {
+    var speakerBios = document.getElementsByClassName('bio');
+    for (let index = 0; index < speakerBios.length; index++) {
+        const elem = speakerBios[index];
+        elem.previousElementSibling.children[0].onload = function () {
+            let profileHeight = elem.previousElementSibling.clientHeight;
+            elem.setAttribute('style', 'padding-bottom: '+profileHeight+'px');
+        }
     }
 }
