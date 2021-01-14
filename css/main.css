@@ -318,6 +318,7 @@ body {
 #fullpage article > .desc {
   max-height: calc(100vh - 140px);
   overflow: scroll;
+  overflow-x: hidden;
   font-family: sans-serif !important;
   color: white;
   padding: 10px;
